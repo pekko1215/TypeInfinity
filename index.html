@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TypeInfinity</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <div id="slot">
+        <div id="pixiview"></div>
+        <canvas id="creditSegment" class="seg" width="60px" height="44px"></canvas>
+        <canvas id="paySegment" class="seg" width="60px" height="44px"></canvas>
+        <canvas id="effectSegment1" class="seg" width="90px" height="44px"></canvas>
+        <canvas id="effectSegment2" class="seg" width="90px" height="44px"></canvas>
+        <img src="img/nabi/1.png" id="one">
+        <div class="GameData"> </div>
+    </div>
+    <br>
+    <input id="saveimg" type="button" value="データの保存" />
+    <input id="loadimg" type="button" value="データの読み込み" />
+    <input id="cleardata" type="button" value="データのリセット" />
+    <input id="auto" type="button" value="オートプレイ" />
+
+    <div id="dataCounter">
+        <!-- <div class="tower">
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="type">REG</div>
+            <div class="count">678</div>
+        </div>
+        <div class="tower">
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="type">BIG</div>
+            <div class="count">123</div>
+        </div>
+        <div class="tower">
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="floor"></div>
+            <div class="type">BIG</div>
+            <div class="count">280</div>
+        </div> -->
+    </div>
+    <div id="slotLogs">
+    </div>
+    <div id="slotExplanation">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.8/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.0.0/marked.min.js"></script>
+    <script src="library/external/jquery-3.2.1.js"></script>
+    <script src="library/external/SevenSegment.js"></script>
+    <script src="library/keyboard.js"></script>
+    <script src="library/SegmentControler.js"></script>
+    <script src="library/BinaryOption.js"></script>
+    <script src="library/TypeWritter.js"></script>
+    <script src="library/SlotModuleMK2.5.js"></script>
+    <script src="library/Lottery.js"></script>
+    <script src="library/Sounder.js"></script>
+    <script src="library/ReelControlData.js"></script>
+    <script src="library/external/marked.min.js"></script>
+    <script src="library/ReelControlRequester.js"></script>
+    <script src="src/Utilities.js"></script>
+    <script src="src/datas/Control.js"></script>
+    <script src="src/datas/KeyBoard.js"></script>
+    <script src="src/datas/Flash.js"></script>
+    <script src="src/datas/Yaku.js"></script>
+    <script src="src/datas/Panel.js"></script>
+    <script src="src/datas/Lot.js"></script>
+    <script src="src/datas/Bonus.js"></script>
+    <script src="src/datas/RT.js"></script>
+    <script src="src/datas/Sound.js"></script>
+    <script src="src/SaveData.js"></script>
+    <script src="src/UI.js"></script>
+    <script src="src/System.js"></script>
+    <script src="src/Effect.js"></script>
+    <script src="src/Main.js"></script>
+    <script>
+        document.getElementById('slotExplanation').innerHTML = marked(`
+# TypeInfity
+## 概要
+ - 規定5号機
+ - A+ART
+ - 上段、斜め2種の3ライン
+ - ART:ダイヤモンドタイムで出玉を増やす
+ - ART中は転落抽選に当選するまで、無限に継続する。
+ - 初期転落確率は77or111+α
+ - 右下のセグ、ダイヤカウントが転落分母と対応している
+ - ART中のレア役はダイヤカウントチャージのチャンス
+ - 純増2.0枚
+ - ダイヤ揃いはカウント7チャンス
+    - 7揃いで、ART当選orダイヤカウントのチャージ発生
+ - 通常時は、リプレイの連続でART抽選
+ - 4連でチャンス、5連で大チャンス、6連で当選濃厚！？
+ - 通常時、まれに押し順ナビが発生する。
+ - 発生確率はモード管理されており、レア役などでモードアップ、はずれ、ベルこぼしでモードダウン
+        `)
+    </script>
+</body>
+
+</html>
